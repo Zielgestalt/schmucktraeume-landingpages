@@ -1,0 +1,15 @@
+.testimonial {
+  padding-left: 2rem;
+  position: relative;
+  font-style: italic;
+
+  &:before {
+    font-style: normal;
+    content: '“';
+    font-size: 10rem;
+    line-height: 5rem;
+    position: absolute;
+    left: -0.75rem;
+    opacity: 0.15;
+  }
+}

@@ -1,0 +1,60 @@
+:where(section) {
+  background: var(--bg);
+  padding: var(--size-8) var(--size-5);
+  position: relative;
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      padding: var(--size-9) var(--size-5);
+    }
+  }
+
+  &.has-overlap-top {
+    padding-top: 0;
+
+    > .container {
+      transform: translateY(-5rem);
+    }
+  }
+}
+
+// :where(section):nth-child(even) {
+//   --bg: var(--bg-2);
+// }
+
+.section-heading {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  p:not(.overline) {
+    margin-top: var(--size-3);
+    font-size: var(--fs-3);
+  }
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      text-align: center;
+    }
+  }
+
+  .overline {
+    color: var(--link);
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: .875rem;
+  
+    &:after {
+      content: "";
+      position: absolute;
+      right: -1rem;
+      width: 4rem;
+      height: 1px;
+      display: block;
+      top: 50%;
+      background: currentColor;
+      transform: translate(100%,-50%);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+body {
+  --color: var(--clr-grey-6);
+  --bg: var(--clr-light);
+  --bg-2: var(--clr-grey-1);
+  --link: var(--clr-primary);
+  --link-hover: var(--clr-primary-hover);
+  --link-inverse: var(--clr-light);
+  
+  --font-family: var(--ff-regular);
+  --fw: var(--fw-3);
+
+  --heading: var(--clr-grey-9);
+  --heading-fw: var(--fw-8);
+}
+
+[data-theme] {
+  color: var(--color);
+  background-color: var(--bg);
+}

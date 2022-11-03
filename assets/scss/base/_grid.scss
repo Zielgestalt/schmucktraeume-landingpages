@@ -1,0 +1,103 @@
+// Grids
+
+.grid-2 {
+  display: grid;
+  gap: var(--size-3);
+  grid-template-columns: 1fr;
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      gap: var(--size-12);
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .content-image {
+    min-height: 75vw;
+    margin-inline: -10%;
+
+    @media (min-width: map-get($breakpoints, "md")) {
+      margin-inline: 0;
+      min-height: unset;
+    }
+  }
+}
+
+.grid-3 {
+  display: grid;
+  gap: var(--size-9);
+  grid-template-columns: 1fr;
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+.grid-2-3 {
+  display: grid;
+  gap: var(--size-9);
+  grid-template-columns: 1fr;
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      grid-template-columns: 2fr 3fr;
+    }
+  }
+}
+
+.grid-3-2 {
+  display: grid;
+  gap: var(--size-9);
+  grid-template-columns: 1fr;
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+}
+
+.grid-copy-image {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "image"
+    "copy"
+  ;
+
+  @media (min-width: map-get($breakpoints, "md")) {
+    gap: var(--size-12);
+    grid-template-areas: "image copy";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content-image {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-inline: -10%;
+    min-height: 75vw;
+    grid-area: image;
+
+    @media (min-width: map-get($breakpoints, "lg")) {
+      margin-inline: 0 -10%;
+      min-height: auto;
+    }
+  }
+
+  .copy {
+    padding-block: 3rem;
+    grid-area: copy;
+  }
+
+  &.image-left {
+    grid-template-areas: "copy image";
+
+    .content-image {
+      @media (min-width: map-get($breakpoints, "lg")) {
+        margin-inline: -10% 0;
+      }
+    }
+  }
+}
