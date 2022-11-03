@@ -47,8 +47,12 @@
 
     @media (min-width: map-get($breakpoints, "md")) {
       display: grid;
-      gap: var(--size-9);
+      gap: var(--size-4);
       grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: map-get($breakpoints, "lg")) {
+      gap: var(--size-9);
     }
 
     &-image {

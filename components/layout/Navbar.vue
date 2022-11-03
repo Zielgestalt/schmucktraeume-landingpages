@@ -1,8 +1,8 @@
 <template>
   <nav class="nav-main" data-theme="dark">
-    <nuxt-link to="/" class="logo">
+    <a href="#top" class="logo">
       <img src="/images/logo.png" width="240" height="54" />
-    </nuxt-link>
+    </a>
   </nav>
 </template>
 

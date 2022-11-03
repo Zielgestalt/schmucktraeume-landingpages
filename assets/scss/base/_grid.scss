@@ -7,8 +7,14 @@
 
   @if map-get($breakpoints, "lg") {
     @media (min-width: map-get($breakpoints, "lg")) {
-      gap: var(--size-12);
+      gap: var(--size-6);
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @if map-get($breakpoints, "xl") {
+    @media (min-width: map-get($breakpoints, "xl")) {
+      gap: var(--size-12);
     }
   }
 
@@ -18,6 +24,9 @@
 
     @media (min-width: map-get($breakpoints, "md")) {
       margin-inline: 0;
+    }
+
+    @media (min-width: map-get($breakpoints, "lg")) {
       min-height: unset;
     }
   }
@@ -68,9 +77,17 @@
   ;
 
   @media (min-width: map-get($breakpoints, "md")) {
-    gap: var(--size-12);
+    gap: var(--size-6);
     grid-template-areas: "image copy";
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: map-get($breakpoints, "lg")) {
+    gap: var(--size-8);
+  }
+
+  @media (min-width: map-get($breakpoints, "xl")) {
+    gap: var(--size-12);
   }
 
   .content-image {
@@ -80,7 +97,11 @@
     min-height: 75vw;
     grid-area: image;
 
-    @media (min-width: map-get($breakpoints, "lg")) {
+    @media (min-width: map-get($breakpoints, "md")) {
+      margin-inline: 0;
+    }
+
+    @media (min-width: map-get($breakpoints, "xl")) {
       margin-inline: 0 -10%;
       min-height: auto;
     }
@@ -95,7 +116,7 @@
     grid-template-areas: "copy image";
 
     .content-image {
-      @media (min-width: map-get($breakpoints, "lg")) {
+      @media (min-width: map-get($breakpoints, "xl")) {
         margin-inline: -10% 0;
       }
     }

@@ -13,10 +13,10 @@
       </div>
 
 
-      <div class="grid-type type-01">
+      <div class="grid-type type-01 is-observed onvisible-fade-up">
         <div class="copy text-flow is-flow-7">
           <div class="text-flow">
-            <h3 class="heading-2">Ringe</h3>
+            <h3 class="heading-3 is-primary">Ringe</h3>
             <p>Ob klassischer Band Ring, auffallender Cocktail Ring oder üppiger Pavé Ring – unsere reichhaltige Kollektion an Ringen mit schwarzen Diamanten hält für jeden Geschmack das passende Schmuckstück parat. Im Zusammenspiel  mit weißen Brillanten erfinden wir besonders gerne klassische Designs neu, die durch den schwarz-weißen Diamanten-Besatz eine ungewöhnliche Note erhalten. Wussten Sie etwa, dass es auch Solitär- und Verlobungsringe mit schwarzen Diamanten gibt?</p>
             <p><NuxtLink to="https://schmucktraeume.com/de/schwarze-diamanten-ringe" target="_blank">Schwarze Diamanten Ringe entdecken</NuxtLink></p>
           </div>
@@ -27,10 +27,10 @@
         </div>
       </div>
 
-      <div class="grid-type type-02">
+      <div class="grid-type type-02 is-observed onvisible-fade-up">
         <div class="copy text-flow is-flow-7">
           <div class="text-flow">
-            <h3 class="heading-2">Ohrschmuck</h3>
+            <h3 class="heading-3 is-primary">Ohrschmuck</h3>
             <p>Ein attraktives Paar Ohrringe schmeichelt stets dem Gesicht seiner Trägerin. Mit schwarzen Diamanten Ohrschmucks setzen Sie zusätzlich noch ein Statement. Ganz gleich, ob Sie zu schlichten Creolen oder prachtvollen Ohrgehängen tendieren: Wir laden Sie ein, sowohl zeitlose Klassiker als auch auffallende Meisterstücke mit schwarzen Diamanten zu entdecken.</p>
             <p><NuxtLink to="https://schmucktraeume.com/de/schwarze-diamanten-ohrschmuck" target="_blank">Schwarze Diamanten Ohrschmuck entdecken</NuxtLink></p>
           </div>
@@ -41,10 +41,10 @@
         </div>
       </div>
 
-      <div class="grid-type type-03">
+      <div class="grid-type type-03 is-observed onvisible-fade-up">
         <div class="copy text-flow is-flow-7">
           <div class="text-flow">
-            <h3 class="heading-2">Armschmuck</h3>
+            <h3 class="heading-3 is-primary">Armschmuck</h3>
             <p>Auch das Armgelenk kommt bei uns nicht zu kurz. Unsere Armbänder und Armreifen mit schwarzen Diamanten verleihen Ihrem Outfit mühelose Eleganz und modernen Chic. Und falls Sie schon Schmuck mit schwarzen Diamanten besitzen, so finden Sie in unserer reichhaltigen Kollektion mit Sicherheit ein perfekt dazu passendes Armband.</p>
             <p><NuxtLink to="https://schmucktraeume.com/de/schwarze-diamanten-armschmuck" target="_blank">Schwarze Diamanten Armschmuck entdecken</NuxtLink></p>
           </div>
@@ -55,10 +55,10 @@
         </div>
       </div>
 
-      <div class="grid-type type-04">
+      <div class="grid-type type-04 is-observed onvisible-fade-up">
         <div class="copy text-flow is-flow-7">
           <div class="text-flow">
-            <h3 class="heading-2">Anhänger und Halsketten</h3>
+            <h3 class="heading-3 is-primary">Anhänger und Halsketten</h3>
             <p>Eine edle Halskette ist stets das passende Geschenk – ob für einen ganz besonderen Menschen oder für sich selbst. Eine Halskette mit schwarzen Diamanten indes sorgt aber zudem für das gewisse Etwas. Unser Tipp: Kombinieren Sie einen Anhänger mit schwarzen Diamanten doch einmal mit einem schlichten Omega Reif aus Weißgold. Ein Reif unterstreicht das klare Design, sorgt für einen wertigen Charakter und bringt Ihre schwarzen Diamanten am Dekolleté besonders gut zur Geltung.</p>
             <p><NuxtLink to="https://schmucktraeume.com/de/schwarze-diamanten-anhaenger-colliers" target="_blank">Schwarze Diamanten Anhänger & Ketten entdecken</NuxtLink></p>
           </div>
@@ -103,17 +103,54 @@
 
   .grid-type {
     display: grid;
+    grid-template-areas: 
+      "image"
+      "copy"
+    ;
+
+    .copy {
+      grid-area: copy;
+    }
 
     .content-image {
+      grid-area: image;
       border-radius: 1rem;
       overflow: hidden;
+      min-height: 70vw;
+      margin: 0 -10% 2rem;
+
+      @media (min-width: map-get($breakpoints, "md")) {
+        min-height: unset;
+        margin: 0;
+      }
     }
     
     @media (min-width: map-get($breakpoints, "md")) {
       gap: var(--size-9);
-      grid-template-columns: 3fr 2fr;
-      max-width: 70%;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "image copy";
+    }
 
+    @if map-get($breakpoints, "xl") {
+      @media (min-width: map-get($breakpoints, "xl")) {
+        grid-template-areas: "copy image";
+        grid-template-columns: 3fr 2fr;
+        max-width: 80%;
+        
+        &.type-02,
+        &.type-04 {
+          margin-left: 10%;
+        }
+
+        &.type-03 {
+          margin-left: 20%;
+        }
+      }
+    }
+
+    @media (min-width: map-get($breakpoints, "xxl")) {
+      max-width: 70%;
+        
       &.type-02,
       &.type-04 {
         margin-left: 15%;
@@ -123,15 +160,9 @@
         margin-left: 30%;
       }
     }
-
-    @if map-get($breakpoints, "lg") {
-      @media (min-width: map-get($breakpoints, "lg")) {
-        // grid-template-columns: 1fr 1fr;
-      }
-    }
   }
 
-  @media (min-width: map-get($breakpoints, "lg")) {
-
+  .is-primary {
+    color: var(--clr-primary);
   }
 </style>
