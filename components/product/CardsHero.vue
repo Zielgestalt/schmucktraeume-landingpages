@@ -41,6 +41,11 @@
 
       @media (min-width: map-get($breakpoints, "lg")) {
         grid-template-columns: 1fr 1fr 1fr;
+        max-width: 46rem;
+      }
+
+      @media (min-width: map-get($breakpoints, "xxl")) {
+        max-width: 58rem;
       }
     }
   }
