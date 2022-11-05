@@ -40,6 +40,7 @@ input[type="reset"],
   // --b-t: var(--button-text);
 
   font-family: var(--ff-secondary);
+  font-size: var(--fs-2);
 
   padding: var(--size-3) var(--size-7);
   color: var(--button-text);
@@ -58,6 +59,7 @@ input[type="reset"],
 
   @media (min-width: map-get($breakpoints, "md")) {
     width: unset;
+    font-size: unset;
   }
   
   &:hover,

@@ -11,7 +11,7 @@
 
       <ProductCardsGallery :products="props.products" />
       
-      <p style="text-align: center;"><a class="button cta has-icon is-primary" href="https://schmucktraeume.com/de/suche?controller=search&s=schwarze+Diamanten" target="_blank"><SvgDiamond />Ganze Kollektion entdecken</a></p>
+      <p style="text-align: center;"><a class="button cta has-icon is-primary" href="https://schmucktraeume.com/de/suche?controller=search&s=schwarze+Diamanten" target="_blank"><SvgDiamond /><span class="is-hidden-mobile">Ganze </span>Kollektion entdecken</a></p>
     </div>
   </section>
 </template>
