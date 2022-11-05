@@ -69,7 +69,7 @@
 
     <LayoutKnowhow />
 
-    <ProductGallery />
+    <ProductGallery :products="productsGallery" />
 
     <section>
       <div class="container text-flow is-flow-10">
@@ -126,6 +126,8 @@
       </div>
     </section>
 
+    <LayoutFooter />
+
   </div>
 </template>
 
@@ -170,6 +172,63 @@
     price: 4800.00,
     url: 'https://schmucktraeume.com/de/arm-69',
   }
+
+  const productsGallery = [
+    {
+      sku: 'swr13',
+      title: 'Stattlicher schwarze Diamanten Ring im Zick-Zack-Design',
+      price: 3630.00,
+      url: 'https://schmucktraeume.com/de/swr-13#/26-ringgr%C3%B6%C3%9Fe-ringgr%C3%B6%C3%9Fe_46',
+    },
+    {
+      sku: 'swo115',
+      title: 'Zeitlose Ohrringe mit schwarzen Diamanten',
+      price: 3388.00,
+      url: 'https://schmucktraeume.com/de/zeitlose-ohrringe-mit-schwarzen-diamanten',
+    },
+    {
+      sku: 'kreuz21',
+      title: 'Edler Kreuz-in-Kreuz Anhänger mit schwarzen Diamanten',
+      price: 3328.00,
+      url: 'https://schmucktraeume.com/de/kreuz-21',
+    },
+    {
+      sku: 'swr13',
+      title: 'Stattlicher schwarze Diamanten Ring im Zick-Zack-Design',
+      price: 3630.00,
+      url: 'https://schmucktraeume.com/de/swr-13#/26-ringgr%C3%B6%C3%9Fe-ringgr%C3%B6%C3%9Fe_46',
+    },
+    {
+      sku: 'swo115',
+      title: 'Zeitlose Ohrringe mit schwarzen Diamanten',
+      price: 3388.00,
+      url: 'https://schmucktraeume.com/de/zeitlose-ohrringe-mit-schwarzen-diamanten',
+    },
+    {
+      sku: 'kreuz21',
+      title: 'Edler Kreuz-in-Kreuz Anhänger mit schwarzen Diamanten',
+      price: 3328.00,
+      url: 'https://schmucktraeume.com/de/kreuz-21',
+    },
+    {
+      sku: 'swr13',
+      title: 'Stattlicher schwarze Diamanten Ring im Zick-Zack-Design',
+      price: 3630.00,
+      url: 'https://schmucktraeume.com/de/swr-13#/26-ringgr%C3%B6%C3%9Fe-ringgr%C3%B6%C3%9Fe_46',
+    },
+    {
+      sku: 'swo115',
+      title: 'Zeitlose Ohrringe mit schwarzen Diamanten',
+      price: 3388.00,
+      url: 'https://schmucktraeume.com/de/zeitlose-ohrringe-mit-schwarzen-diamanten',
+    },
+    {
+      sku: 'kreuz21',
+      title: 'Edler Kreuz-in-Kreuz Anhänger mit schwarzen Diamanten',
+      price: 3328.00,
+      url: 'https://schmucktraeume.com/de/kreuz-21',
+    }
+  ]
 
   const testimonials = [
     'DIE beste Adresse im Internet in Sachen Schmuck/Preis/Leistung/Spitzenqualität',

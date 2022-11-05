@@ -1,16 +1,30 @@
 <template>
-  <section>
+  <section class=" text-flow is-flow-9">
     <div class="container text-flow is-flow-6">
       <div class="headings section-heading text-flow is-flow-6">
         <div class="heading-decoration"><SvgDiamond /></div>
         <h2 class="heading-2">Unsere Black Diamond Kollektion</h2>
       </div>
-      <p style="text-align: center;">Product Gallery</p>
+    </div>
+
+    <div class="container is-visible text-flow is-flow-6">
+
+      <ProductCardsGallery :products="props.products" />
       
       <p style="text-align: center;"><a class="button cta has-icon is-primary" href="https://schmucktraeume.com/de/suche?controller=search&s=schwarze+Diamanten" target="_blank"><SvgDiamond />Ganze Kollektion entdecken</a></p>
     </div>
   </section>
 </template>
+
+<script setup>
+  const props = defineProps({
+    products: { 
+      type: Object,
+      default: {}
+    }
+    
+  })
+</script>
 
 <style lang="scss" scoped>
 @import "assets/scss/variables/variables";
