@@ -1,8 +1,15 @@
 <template>
   <nav class="nav-main" data-theme="dark">
-    <a href="#top" class="logo">
-      <img src="/images/logo.png" width="240" height="54" />
-    </a>
+    <div class="container full">
+      <a href="#top" class="logo">
+        <img src="/images/logo.png" width="240" height="54" />
+      </a>
+
+      <div class="contact">
+        <p><a href="tel:+4989605187">+49 89 605187</a> | <a href="mailto:info@schmucktraeume.com">info@schmucktraeume.com</a></p>
+      </div>
+    </div>
+    
   </nav>
 </template>
 
@@ -15,13 +22,17 @@ nav {
   background-color: var(--nav-background);
   width: 100%;
   box-shadow: 0 3px 1.125rem rgba(0,0,0,0.1);
-  display: flex;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .logo {
-    max-width: 50%;
+    max-width: 256px;
     display: block;
-    margin: 0 auto;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 }
 </style>

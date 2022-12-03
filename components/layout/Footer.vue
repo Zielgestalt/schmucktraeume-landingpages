@@ -3,8 +3,8 @@
     <div class="container text-flow is-flow-8">
       <div class="grid">
         <div class="column text-flow">
-          <SvgLogo class="logo" />
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin commodo.</p>
+          <img src="/images/logo.png" width="240" height="54" />
+          <p>Ihr Onlineshop für exquisite Schmuckstücke und meisterhafte Juwelen seit 2002.</p>
         </div>
 
         <div class="column text-flow">
