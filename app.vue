@@ -10,7 +10,7 @@
     <section>
       <div class="container text-flow is-flow-10">
         <div class="headings section-heading">
-          <h2 class="heading-2">Schwarze Diamanten</h2>
+          <h2 class="heading-2">Fünf attraktive Gründe, die für schwarze Diamanten sprechen</h2>
             <p>Schwarze Diamanten verzaubern vor allem durch ihr geheimnisvolles Funkeln. Im Zusammenspiel mit feinsten weißen Brillanten entsteht kontrastreiche Brillanz, die garantiert viele Blicke auf sich zieht. Das klare Zusammenspiel aus Schwarz und Weiß verleiht jedem Stück eine ganz besondere Note.</p>
         </div>
       
