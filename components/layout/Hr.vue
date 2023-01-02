@@ -11,6 +11,7 @@
     width: 100%;
     padding: 2rem 0;
     color: black;
+    background: white;
 
     &::before {
       content: '';

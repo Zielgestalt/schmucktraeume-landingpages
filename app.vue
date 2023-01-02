@@ -32,7 +32,7 @@
           </div>
 
           <div class="content-image is-relative has-background is-observed onvisible-fade-right is-staggered-1">
-            <img src="/images/schwarze-diamanten/schwarze-diamanten-content-01.jpg" height="590" width="680" alt="Schwarze Diamanten" class="is-background" lazyload />
+            <img src="/images/schwarze-diamanten/schwarze-diamanten-content-01.jpg" height="590" width="680" alt="Schwarze Diamanten" class="is-background is-top" lazyload />
           </div>
         </div>
 
@@ -138,7 +138,8 @@
     headline: 'Geheimnisvolles Funkeln, kontrastreiche Brillanz',
     copy: 'Das Leben ist zu kurz für 0815. Unsere von Hand in Gold gefertigten Schmuckstücke mit schwarzen Diamanten sind wie gemacht für Frauen, die gerne markante Akzente setzen und auf einen Touch Extravaganz nicht verzichten wollen. Ob stattlicher Pavé Ring, opulenter Armreif oder klassischer Ohrschmuck - unsere breit gefächerte Kollektion an hochwertigem Schmuck mit schwarzen Diamanten hält für jeden Geschmack das passende Lieblings-Juwel bereit.',
     cta: {
-      text: '„Black Diamond“ Kollektion',
+      textMobile: 'zur „Black Diamond“ Kollektion',
+      text: '„Black Diamond“ Kollektion entdecken',
       url: '#',
       icon: 'diamond',
     }

@@ -56,7 +56,6 @@
         </div>
         <div class="column"></div>
         <div class="comumn">
-          <BondrsSocialMedia />
         </div>
       </div>
     </div>

@@ -101,9 +101,12 @@
       margin-inline: 0;
     }
 
+    @media (min-width: map-get($breakpoints, "lg")) {
+      min-height: auto;
+    }
+
     @media (min-width: map-get($breakpoints, "xl")) {
       margin-inline: 0 -10%;
-      min-height: auto;
     }
   }
 
@@ -113,7 +116,10 @@
   }
 
   &.image-left {
-    grid-template-areas: "copy image";
+
+    @media (min-width: map-get($breakpoints, "md")) {
+      grid-template-areas: "copy image";
+    }
 
     .content-image {
       @media (min-width: map-get($breakpoints, "xl")) {

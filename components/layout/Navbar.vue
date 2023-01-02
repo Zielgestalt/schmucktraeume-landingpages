@@ -6,7 +6,7 @@
       </a>
 
       <div class="contact">
-        <p><a href="tel:+4989605187">+49 89 605187</a> | <a href="mailto:info@schmucktraeume.com">info@schmucktraeume.com</a></p>
+        <p><a href="tel:+4989605187"><span class="is-hidden-tablet" style="padding-right: 1rem;"><Icon name="mdi:phone" size="2rem" /></span><span class="is-hidden-mobile">+49 89 605187</span></a> <span class="is-hidden-mobile">|</span> <a href="mailto:info@schmucktraeume.com"><span class="is-hidden-tablet"><Icon name="mdi:email" size="2rem" /></span><span class="is-hidden-mobile">info@schmucktraeume.com</span></a></p>
       </div>
     </div>
     
@@ -27,12 +27,22 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 var(--size-5);
+
+    @media (min-width: map-get($breakpoints, "md")) {
+      padding: 0;
+    }
   }
 
   .logo {
-    max-width: 256px;
+    max-width: 176px;
     display: block;
-    padding: 1rem;
+    padding: 1rem 0;
+
+    @media (min-width: map-get($breakpoints, "md")) {
+      max-width: 256px;
+      padding: 1rem;
+    }
   }
 }
 </style>

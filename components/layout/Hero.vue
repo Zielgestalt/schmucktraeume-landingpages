@@ -1,5 +1,6 @@
 <template>
   <header class="hero">
+    <img v-if="props.hero.image" :src="props.hero.image" class="hero-image-mobile">
     <img v-if="props.hero.image" :src="props.hero.image" class="hero-image is-background">
     <div class="hero-blur is-background is-block"></div>
     <div class="container full">
@@ -10,7 +11,7 @@
             <h1 v-if="props.hero.headline" class="heading-1">{{ props.hero.headline }}</h1>
           </div>
           <p class="copy" v-if="props.hero.copy">{{ props.hero.copy }}</p>
-          <p class=" is-observed onvisible-fade-up is-staggered-5"><a class="button cta has-icon is-dark" :href="props.hero.cta.url" target="_blank"><SvgDiamond />{{ props.hero.cta.text}}<span class="is-hidden-mobile"> entdecken</span></a></p>
+          <p class=" is-observed onvisible-fade-up is-staggered-5"><a class="button cta has-icon is-dark" :href="props.hero.cta.url" target="_blank"><SvgDiamond /><span class="is-hidden-mobile">{{ props.hero.cta.text}}</span><span class="is-hidden-tablet">{{ props.hero.cta.textMobile }}</span></a></p>
         </div>
       </div>
     </div>
@@ -45,7 +46,13 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: var(--size-11) var(--size-5) var(--size-11) var(--size-5);
+  padding: var(--size-8) var(--size-5) var(--size-11) var(--size-5);
+  margin-top: 18rem;
+
+  @media (min-width: map-get($breakpoints, "md")) {
+    margin-top: 0;
+    padding: var(--size-11) var(--size-5) var(--size-11) var(--size-5);
+  }
 
   .grid-2 {
     max-width: 600px;
@@ -72,13 +79,26 @@
     @media (min-width: map-get($breakpoints, "xl")) {
       object-position: center center;
     }
+
+    &-mobile {
+      position: fixed;
+      height: 20rem;
+      width: auto;
+      max-width: none;
+      top: 2rem;
+      right: -6rem;
+
+      @media (min-width: map-get($breakpoints, "md")) {
+        display: none;
+      }
+    }
   }
 
   &-blur {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.6);
 
     @supports (backdrop-filter: blur(12px)) {
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(1rem);
     }
 
