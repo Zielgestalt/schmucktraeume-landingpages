@@ -136,16 +136,16 @@
       }
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 56rem;
-      background: var(--gradient-bg);
-      bottom: 100%;
-      transform: scaleY(-1);
-    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 56rem;
+    //   background: var(--gradient-bg);
+    //   bottom: 100%;
+    //   transform: scaleY(-1);
+    // }
 
     .grid {
       display: grid;
