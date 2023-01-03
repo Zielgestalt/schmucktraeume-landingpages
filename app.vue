@@ -11,7 +11,6 @@
       <div class="container text-flow is-flow-10">
         <div class="headings section-heading">
           <h2 class="heading-2">Fünf attraktive Gründe, die für schwarze Diamanten sprechen</h2>
-            <p>Schwarze Diamanten verzaubern vor allem durch ihr geheimnisvolles Funkeln. Im Zusammenspiel mit feinsten weißen Brillanten entsteht kontrastreiche Brillanz, die garantiert viele Blicke auf sich zieht. Das klare Zusammenspiel aus Schwarz und Weiß verleiht jedem Stück eine ganz besondere Note.</p>
         </div>
       
 
@@ -131,7 +130,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
   const hero = {
     image: '/images/schwarze-diamanten/schwarze-diamanten-hero.jpg',
     overline: 'Schwarze Diamanten',
@@ -140,7 +139,7 @@
     cta: {
       textMobile: 'zur „Black Diamond“ Kollektion',
       text: '„Black Diamond“ Kollektion entdecken',
-      url: '#',
+      url: 'https://schmucktraeume.com/de/schwarze-diamanten',
       icon: 'diamond',
     }
   }
@@ -232,7 +231,7 @@
     {
       sku: 'arm80',
       title: 'Feinster Armreif mit schwarzen Diamanten',
-      price: 3013.00,
+      price: 3200.00,
       url: 'https://schmucktraeume.com/de/arm-80',
     },
     {
@@ -267,5 +266,42 @@
     sections.forEach(section => {
       observer.observe(section)
     })
+  })
+
+  const config = useRuntimeConfig()
+
+  useHead({
+    title: 'Schwarze Diamanten',
+    titleTemplate: (titleChunk) => {
+      return titleChunk ? `${titleChunk} - ${config.public.siteName}` : config.public.siteName
+    },
+    // link: [
+    //   { rel: 'apple-touch-icon', size: '57x57', href: '/favicon/apple-icon-57x57.png' },
+    //   { rel: 'apple-touch-icon', size: '60x60', href: '/favicon/apple-icon-60x60.png' },
+    //   { rel: 'apple-touch-icon', size: '72x72', href: '/favicon/apple-icon-72x72.png' },
+    //   { rel: 'apple-touch-icon', size: '76x76', href: '/favicon/apple-icon-76x76.png' },
+    //   { rel: 'apple-touch-icon', size: '114x114', href: '/favicon/apple-icon-114x114.png' },
+    //   { rel: 'apple-touch-icon', size: '120x120', href: '/favicon/apple-icon-120x120.png' },
+    //   { rel: 'apple-touch-icon', size: '144x144', href: '/favicon/apple-icon-144x144.png' },
+    //   { rel: 'apple-touch-icon', size: '152x152', href: '/favicon/apple-icon-152x152.png' },
+    //   { rel: 'apple-touch-icon', size: '180x180', href: '/favicon/apple-icon-180x180.png' },
+    //   { rel: 'icon', type: 'image/png', size: '192x192', href: '/favicon/android-chrome-192x192.png' },
+    //   { rel: 'icon', type: 'image/png', size: '512x512', href: '/favicon/android-chrome-512x512.png' },
+    //   { rel: 'icon', type: 'image/png', size: '32x32', href: '/favicon/favicon-32x32.png' },
+    //   { rel: 'icon', type: 'image/png', size: '96x96', href: '/favicon/favicon-96x96.png' },
+    //   { rel: 'icon', type: 'image/png', size: '16x16', href: '/favicon/favicon-16x16.png' },
+    //   { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
+    //   { rel: 'manifest', href: '/favicon/site.webmanifest' },
+    //   { name: 'msapplication-TileImage', content: '/favicon/ms-icon-144x144.png' }
+    // ]
+    // as a string,
+    // where `%s` is replaced with the title
+    // titleTemplate: '%s - ' + config.public.siteTitle
+    // ... or as a function
+    // titleTemplate: (productCategory) => {
+    //   return productCategory
+    //     ? `${productCategory} - Site Title`
+    //     : 'Site Title'
+    // }
   })
 </script>

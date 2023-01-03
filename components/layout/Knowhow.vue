@@ -18,11 +18,11 @@
           <div class="text-flow">
             <h3 class="heading-3 is-primary">Ringe</h3>
             <p>Ob klassischer Band Ring, auffallender Cocktail Ring oder üppiger Pavé Ring – unsere reichhaltige Kollektion an Ringen mit schwarzen Diamanten hält für jeden Geschmack das passende Schmuckstück parat. Im Zusammenspiel  mit weißen Brillanten erfinden wir besonders gerne klassische Designs neu, die durch den schwarz-weißen Diamanten-Besatz eine ungewöhnliche Note erhalten. Wussten Sie etwa, dass es auch Solitär- und Verlobungsringe mit schwarzen Diamanten gibt?</p>
-            <p><NuxtLink to="https://schmucktraeume.com/de/schwarze-diamanten-ringe" target="_blank">Schwarze Diamanten Ringe entdecken</NuxtLink></p>
+            <p><NuxtLink to="https://schmucktraeume.com/de/ringe-mit-schwarzen-diamanten" target="_blank">Schwarze Diamanten Ringe entdecken</NuxtLink></p>
           </div>
         </div>
 
-        <div class="content-image is-relative has-background">
+        <div class="content-image is-high is-relative has-background">
           <img src="/images/schwarze-diamanten/schwarze-diamanten-ringe.jpg" height="380" width="380" alt="Ringe mit Schwarze Diamanten" class="is-background" lazyload />
         </div>
       </div>
@@ -32,7 +32,7 @@
           <div class="text-flow">
             <h3 class="heading-3 is-primary">Ohrschmuck</h3>
             <p>Ein attraktives Paar Ohrringe schmeichelt stets dem Gesicht seiner Trägerin. Mit schwarzen Diamanten Ohrschmucks setzen Sie zusätzlich noch ein Statement. Ganz gleich, ob Sie zu schlichten Creolen oder prachtvollen Ohrgehängen tendieren: Wir laden Sie ein, sowohl zeitlose Klassiker als auch auffallende Meisterstücke mit schwarzen Diamanten zu entdecken.</p>
-            <p><NuxtLink to="https://schmucktraeume.com/de/schwarze-diamanten-ohrschmuck" target="_blank">Schwarze Diamanten Ohrschmuck entdecken</NuxtLink></p>
+            <p><NuxtLink to="https://schmucktraeume.com/de/ohrschmuck-mit-schwarzen-diamanten" target="_blank">Schwarze Diamanten Ohrschmuck entdecken</NuxtLink></p>
           </div>
         </div>
 
@@ -46,7 +46,7 @@
           <div class="text-flow">
             <h3 class="heading-3 is-primary">Armschmuck</h3>
             <p>Auch das Armgelenk kommt bei uns nicht zu kurz. Unsere Armbänder und Armreifen mit schwarzen Diamanten verleihen Ihrem Outfit mühelose Eleganz und modernen Chic. Und falls Sie schon Schmuck mit schwarzen Diamanten besitzen, so finden Sie in unserer reichhaltigen Kollektion mit Sicherheit ein perfekt dazu passendes Armband.</p>
-            <p><NuxtLink to="https://schmucktraeume.com/de/schwarze-diamanten-armschmuck" target="_blank">Schwarze Diamanten Armschmuck entdecken</NuxtLink></p>
+            <p><NuxtLink to="https://schmucktraeume.com/de/armb%C3%A4nder-mit-schwarzen-diamanten" target="_blank">Schwarze Diamanten Armschmuck entdecken</NuxtLink></p>
           </div>
         </div>
 
@@ -60,7 +60,7 @@
           <div class="text-flow">
             <h3 class="heading-3 is-primary">Anhänger und Halsketten</h3>
             <p>Eine edle Halskette ist stets das passende Geschenk – ob für einen ganz besonderen Menschen oder für sich selbst. Eine Halskette mit schwarzen Diamanten indes sorgt aber zudem für das gewisse Etwas. Unser Tipp: Kombinieren Sie einen Anhänger mit schwarzen Diamanten doch einmal mit einem schlichten Omega Reif aus Weißgold. Ein Reif unterstreicht das klare Design, sorgt für einen wertigen Charakter und bringt Ihre schwarzen Diamanten am Dekolleté besonders gut zur Geltung.</p>
-            <p><NuxtLink to="https://schmucktraeume.com/de/schwarze-diamanten-anhaenger-colliers" target="_blank">Schwarze Diamanten Anhänger & Ketten entdecken</NuxtLink></p>
+            <p><NuxtLink to="https://schmucktraeume.com/de/anh%C3%A4nger-colliers-mit-schwarzen-diamanten" target="_blank">Schwarze Diamanten Anhänger & Ketten entdecken</NuxtLink></p>
           </div>
         </div>
 
@@ -116,12 +116,16 @@
       grid-area: image;
       border-radius: 1rem;
       overflow: hidden;
-      min-height: 70vw;
+      aspect-ratio: 1;
       margin: 0 -10% 2rem;
 
       @media (min-width: map-get($breakpoints, "md")) {
         min-height: unset;
         margin: 0;
+      }
+
+      @media (min-width: map-get($breakpoints, "lg")) {
+        aspect-ratio: auto;
       }
     }
     

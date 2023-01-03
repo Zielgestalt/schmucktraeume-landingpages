@@ -3,20 +3,19 @@ export default defineNuxtConfig({
   modules: ['nuxt-icon'],
   app: {
     head: {
-      title: 'Juwelier Schmucktraeume.com',
+      charset: 'utf-16',
       meta: [
-        { name: 'description', content: 'Coming soon...' },
-        { name: 'msapplication-TileColor', content: '#9f00a7' },
-        { name: 'theme-color', content: '#ffffff' },
-        { property: 'og:image', content: '/bondrs-og.jpg' }
+        { name: 'facebook-domain-verification', content: 'osvguhsfzubi9g6wmu1ik2kijtrodh' }
       ],
-      link: [
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-        { rel: 'manifest', href: '/site.webmanifest' },
-        { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
-      ],
+    }
+  },
+
+  runtimeConfig: { // Remove this in prod
+    // apiKey: '' // Default to an empty string, automatically set at runtime using process.env.NUXT_API_KEY
+    public: {
+      siteName: 'Juwelier Schmucktraeume.com',
+      language: 'de-DE',
+      titleSeparator: '·',
     }
   },
 
