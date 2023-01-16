@@ -1,6 +1,9 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['nuxt-icon'],
+  modules: [
+    'nuxt-icon',
+    '@nuxtjs/plausible',
+  ],
   app: {
     head: {
       charset: 'utf-16',
@@ -17,6 +20,12 @@ export default defineNuxtConfig({
       language: 'de-DE',
       titleSeparator: '·',
     }
+  },
+
+  plausible: {
+    domain: 'schmucktraeume.netlify.app',
+    // trackLocalhost: true,
+    autoOutboundTracking: true,
   },
 
   css: [
